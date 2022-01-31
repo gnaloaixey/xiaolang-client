@@ -6,10 +6,10 @@ export default defineConfig({
 	// vue插件，vnesting插件
 	plugins: [
 		vue(),
-		{
-			...vnestingServerMiddlewares({}),
-			apply: "serve",
-		},
+		// {
+		// 	...vnestingServerMiddlewares({}),
+		// 	apply: "serve",
+		// },
 	],
 	resolve: {
 		alias: {
@@ -23,7 +23,7 @@ export default defineConfig({
 		cssCodeSplit: false,
 		outDir: "./dist",
 	},
-	publicDir: "/src/public",
+	publicDir: "src/public",
 	server: {
 		port: 9087,
 		proxy: {

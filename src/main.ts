@@ -4,5 +4,5 @@
  * @param vm | undefinded
  * @returns void
  */
-import "@core/web/main";
+import "@web/main";
 // or import vm from "@core/web/main";

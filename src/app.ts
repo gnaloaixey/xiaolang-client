@@ -4,7 +4,7 @@
  * @param app
  * @returns app
  */
-import app from "@core/web/app";
+import app from "@web/app";
 /* ----------code-between-these-two-lines---------- */
 
 /* -----------------------end---------------------- */
