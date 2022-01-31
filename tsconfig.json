@@ -21,14 +21,8 @@
 			"@/*": [
 				"src/*"
 			],
-			"@server/*": [
-				"src/server/*"
-			],
 			"@web/*": [
-				"src/web/*"
-			],
-			"@core/*": [
-				"src/core/*"
+				"src/core/web/*"
 			],
 		},
 	},
@@ -36,6 +30,7 @@
 		"src/**/*.ts",
 		"src/**/*.d.ts",
 		"src/**/*.tsx",
-		"src/**/*.vue"
+		"src/**/*.vue",
+		"vnesting-config.ts"
 	]
 }

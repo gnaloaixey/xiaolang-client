@@ -1,2 +1,2 @@
-import i18n from "@core/web/locale";
+import i18n from "@web/locale";
 export default i18n;

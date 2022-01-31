@@ -16,5 +16,4 @@ let router: RouteRecordRaw[] = [
 	},
 ];
 /* -----------------------end---------------------- */
-
 export default router;

@@ -4,7 +4,7 @@
  * @param router
  * @returns router
  */
-import router from "@core/web/router";
+import router from "@web/router";
 /* ----------code-between-these-two-lines---------- */
 
 /* -----------------------end---------------------- */

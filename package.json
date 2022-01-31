@@ -3,11 +3,10 @@
 	"version": "0.0.0",
 	"scripts": {
 		"dev": "vite dev --config vite.config.ts  --host --mode development",
-		"build:con": "vue-tsc --noEmit && vite build --emptyOutDir --config vite.config.ts --mode production",
-		"build:dis": "vue-tsc --noEmit && vite bbuild --mode prod-dis",
+		"build": "vue-tsc --noEmit && vite build --emptyOutDir --config vite.config.ts --mode production",
 		"preview": "vite preview",
 		"lint": "vue-cli-service lint",
-		"npmi": "npm --registry https://registry.npm.taobao.org install",
+		"setup": "npm --registry https://registry.npm.taobao.org install",
 		"update:core": "",
 		"upload": "scp -r -P [port] ./dist/* [host]:[path]"
 	},
