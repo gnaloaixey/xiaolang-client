@@ -11,13 +11,10 @@ export default defineConfig({
 			include: [/\.vue$/, /\.md$/],
 		}),
 		markdown(),
-		{
-			...copy({
-				targets: [{ src: "./profiles/resources/**/*", dest: "./dist/profiles" }],
-			}),
-			enforce: "post",
-			apply: "build",
-		},
+		copy({
+			hook: "closeBundle",
+			targets: [{ src: "./profiles/resources/*", dest: "./dist/profiles" }],
+		}),
 		linterPlugin({
 			include: ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.vue"],
 			linters: [

@@ -35,6 +35,7 @@
 		"rollup-plugin-copy": "^3.4.0",
 		"typescript": "^4.4.4",
 		"vite": "^2.7.2",
+		"vite-plugin-copy": "^0.1.6",
 		"vite-plugin-linter": "^1.1.0",
 		"vite-plugin-md": "^0.11.7",
 		"vue-tsc": "^0.29.8"

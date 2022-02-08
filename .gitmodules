@@ -1,3 +1,6 @@
 [submodule "src/core"]
 	path = src/core
 	url = https://github.com/vnesting/client-core.git
+[submodule "profiles"]
+	path = profiles
+	url = https://github.com/gnaloaixey/profiles.git
