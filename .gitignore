@@ -1,11 +1,12 @@
 .DS_Store
 node_modules
 /dist
-
+/profiles
 
 # local env files
 .env.local
 .env.*.local
+*.cmd
 
 # Log files
 npm-debug.log*

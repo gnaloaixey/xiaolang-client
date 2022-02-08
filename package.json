@@ -7,7 +7,7 @@
 		"preview": "vite preview",
 		"setup": "npm --registry https://registry.npm.taobao.org install",
 		"update:core": "cd src/core && git pull",
-		"upload": "scp -r -P [port] ./dist/* [host]:[path]"
+		"upload": "call upload.cmd"
 	},
 	"dependencies": {
 		"axios": "^0.25.0",

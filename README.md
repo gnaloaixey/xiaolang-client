@@ -6,7 +6,7 @@
 
 ```shell
 # 拉取项目到本地
-git clone --recursive https://github.com/vnesting/client.git
+git clone --recursive https://github.com/gnaloaixey/xiaolang-client.git
 # 将远程地址设置成自己的仓库
 git remote -v # 查看fetch和push路径
 git remote set-url origin "自己仓库路径"
