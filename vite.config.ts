@@ -1,11 +1,21 @@
-import { defineConfig, UserConfigExport } from "vite";
+import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import vnestingServerMiddlewares from "./src/core/plugin/vite-plugin-vnesting-server-middlewares";
+import { EsLinter, linterPlugin } from "vite-plugin-linter";
 // https://vitejs.dev/config/
 export default defineConfig({
 	// vue插件，vnesting插件
 	plugins: [
 		vue(),
+		linterPlugin({
+			include: ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.vue"],
+			linters: [
+				new EsLinter({
+					configEnv: { command: "serve", mode: "development" },
+					serveOptions: { clearCacheOnStart: true, fix: true },
+				}),
+			],
+		}),
+
 		// {
 		// 	...vnestingServerMiddlewares({}),
 		// 	apply: "serve",
@@ -13,8 +23,8 @@ export default defineConfig({
 	],
 	resolve: {
 		alias: {
-			"@": "/src",
-			"@web": "/src/core/web",
+			"@/": "/src/", // 切勿更改
+			"@web/": "/src/core/web/", // 切勿更改
 		},
 	},
 	build: {
@@ -23,12 +33,26 @@ export default defineConfig({
 		cssCodeSplit: false,
 		outDir: "./dist",
 	},
-	publicDir: "src/public",
 	server: {
 		port: 9087,
 		proxy: {
+			/**
+			 * 后台服务 , 准备阶段就可以将系统管理模块运行到远程服务器了，也可以在本地运行
+			 * 配套后台管理地址：https://github.com/vnesting/server.git
+			 */
 			"/api": {
 				//本地服务接口地址
+				target: "http://localhost:8080",
+				ws: true,
+				rewrite(p) {
+					return p;
+				},
+			},
+			/**
+			 * 与vite plugins配置一致
+			 */
+			"/devServer": {
+				//Dev服务接口地址
 				target: "http://localhost:8080",
 				ws: true,
 				rewrite(p) {

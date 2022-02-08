@@ -1,7 +1,7 @@
 import app from "./modules/app";
 
 /**
- * 将所以vuex模块导出即可
+ * 将所有vuex模块导出即可
  */
 export default {
 	app,

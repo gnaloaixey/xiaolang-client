@@ -5,15 +5,15 @@
  */
 import { RouteRecordRaw } from "vue-router";
 /* ----------code-between-these-two-lines---------- */
-let router: RouteRecordRaw[] = [
+let route: RouteRecordRaw[] = [
 	{
-		path: "/example",
+		path: "/",
 		meta: {
-			__title: "example",
+			__title: "welcome",
 			keepAlive: true,
 		},
-		component: () => import("@/views/example.vue"),
+		component: () => import("@/views/welcome.vue"),
 	},
 ];
 /* -----------------------end---------------------- */
-export default router;
+export default route;

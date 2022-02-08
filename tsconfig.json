@@ -12,7 +12,6 @@
 		"allowSyntheticDefaultImports": true,
 		"sourceMap": true,
 		"baseUrl": "./",
-		"outDir": "dist",
 		"lib": [
 			"esnext",
 			"dom"
@@ -23,14 +22,13 @@
 			],
 			"@web/*": [
 				"src/core/web/*"
-			],
+			]
 		},
 	},
 	"include": [
 		"src/**/*.ts",
 		"src/**/*.d.ts",
 		"src/**/*.tsx",
-		"src/**/*.vue",
-		"vnesting-config.ts"
+		"src/**/*.vue"
 	]
 }
