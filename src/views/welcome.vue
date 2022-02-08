@@ -1,16 +1,8 @@
 <template>
-	<div>welcome</div>
+	<welcome></welcome>
 </template>
 
 <style lang="scss" scoped></style>
-<script lang="ts">
-import { defineComponent } from "vue";
-export default defineComponent({
-	name: "Welcome",
-	data() {
-		return {
-			count: 0,
-		};
-	},
-});
+<script setup lang="ts">
+import Welcome from "./welcome.md";
 </script>

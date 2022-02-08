@@ -1,11 +1,23 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import markdown from "vite-plugin-md";
+import copy from "rollup-plugin-copy";
 import { EsLinter, linterPlugin } from "vite-plugin-linter";
 // https://vitejs.dev/config/
 export default defineConfig({
 	// vue插件，vnesting插件
 	plugins: [
-		vue(),
+		vue({
+			include: [/\.vue$/, /\.md$/],
+		}),
+		markdown(),
+		{
+			...copy({
+				targets: [{ src: "./profiles/resources/**/*", dest: "./dist/profiles" }],
+			}),
+			enforce: "post",
+			apply: "build",
+		},
 		linterPlugin({
 			include: ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.vue"],
 			linters: [
@@ -21,6 +33,7 @@ export default defineConfig({
 		// 	apply: "serve",
 		// },
 	],
+	base: "./",
 	resolve: {
 		alias: {
 			"@/": "/src/", // 切勿更改
