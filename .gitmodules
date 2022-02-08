@@ -4,3 +4,6 @@
 [submodule "public/profiles"]
 	path = public/profiles
 	url = https://github.com/gnaloaixey/profiles.git
+[submodule "public/private"]
+	path = public/private
+	url = https://github.com/gnaloaixey/private-profiles.git
