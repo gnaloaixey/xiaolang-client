@@ -1,5 +1,5 @@
 <template>
-	<welcome></welcome>
+	<welcome :init="5"></welcome>
 </template>
 
 <style lang="scss" scoped></style>

@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import markdown from "vite-plugin-md";
+import prism from "markdown-it-prism";
+import anchor from "markdown-it-anchor";
 import copy from "rollup-plugin-copy";
 import { EsLinter, linterPlugin } from "vite-plugin-linter";
 // https://vitejs.dev/config/
@@ -10,7 +12,9 @@ export default defineConfig({
 		vue({
 			include: [/\.vue$/, /\.md$/],
 		}),
-		markdown(),
+		markdown({
+			markdownItUses: [anchor, prism],
+		}),
 		copy({
 			hook: "closeBundle",
 			targets: [{ src: "./profiles/resources/*", dest: "./dist/profiles" }],

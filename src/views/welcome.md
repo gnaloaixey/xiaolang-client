@@ -1,3 +1,8 @@
-# 欢迎
+---
+title: Hello
+slug: home
+---
 
--   这里是我的主页
+<h1>Hello world!</h1>
+
+Front matter: {{ frontmatter.title }}
