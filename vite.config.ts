@@ -38,7 +38,7 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			"@/": "/src/", // 切勿更改
-			"@web/": "/src/core/web/", // 切勿更改
+			"@web/": "/src/admin/web/", // 切勿更改
 		},
 	},
 	build: {

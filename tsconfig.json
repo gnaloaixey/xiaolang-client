@@ -21,7 +21,7 @@
 				"src/*"
 			],
 			"@web/*": [
-				"src/core/web/*"
+				"src/admin/web/*"
 			]
 		},
 	},
